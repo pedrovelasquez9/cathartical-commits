@@ -1,15 +1,41 @@
 ---
-
+import About from "../../components/astro/about.astro";
+import Convention from "../../components/astro/convention.astro";
+import Examples from "../../components/astro/examples.astro";
+import Header from "../../components/astro/header.astro";
+import Resume from "../../components/astro/resume.astro";
 ---
 
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Cathartical commits</title>
-	</head>
-	<body>
-		<h1>Commits catárticos</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Commits Catárticos</title>
+  </head>
+  <body>
+    <Header />
+    <Resume />
+    <Convention />
+    <Examples />
+    <About />
+  </body>
 </html>
+
+<style is:global>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 2.6em;
+  }
+
+  p {
+    font-size: 18px;
+  }
+</style>
