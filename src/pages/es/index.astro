@@ -15,10 +15,14 @@ import Resume from "../../components/astro/resume.astro";
   </head>
   <body>
     <Header />
-    <Resume />
-    <Convention />
-    <Examples />
-    <About />
+    <main>
+      <article>
+        <Resume />
+        <Examples />
+        <Convention />
+        <About />
+      </article>
+    </main>
   </body>
 </html>
 
@@ -32,10 +36,60 @@ import Resume from "../../components/astro/resume.astro";
   }
 
   h1 {
-    font-size: 2.6em;
+    font-size: 3.6em;
   }
 
-  p {
-    font-size: 18px;
+  .section-title {
+    font-size: 2.3em;
+    color: #002382;
+    border-bottom: 1px solid #eaecef;
+    padding-block-end: 0.3em;
+    margin-block-start: 16px;
+    margin-block-end: 24px;
+  }
+
+  .subtitle {
+    font-size: 1.5em;
+  }
+
+  h2.subtitle {
+    font-size: 1.2em;
+  }
+
+  p,
+  ol > li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-block-end: 16px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  article {
+    border-radius: 15px;
+    color: #24292e;
+    padding-block: 40px;
+    padding-inline: 48px;
+    max-width: 1024px;
+    box-shadow: 1px 1px 10px #a8a8a8;
+    transform: translateY(-64px);
+    background-color: #fff;
+  }
+
+  hr {
+    color: #ccc;
+  }
+
+  pre {
+    background: #f4f2f2;
+    border-left: 5px solid #ccc;
+  }
+
+  code {
+    font-size: 15px;
   }
 </style>

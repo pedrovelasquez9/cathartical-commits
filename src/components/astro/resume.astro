@@ -1,5 +1,71 @@
----
+<section>
+  <h1 class="section-title">Cathartical commits 1.0.0</h1>
+  <h2 class="section-title subtitle">Resumen</h2>
+  <p>
+    La especificación de commits catárticos es una convención para mensajes de
+    commits que dejen expresar un historial realmente explícito basado en el
+    estrés estadísticamente acumulado de los desarrolladores.
+  </p>
+  <p>
+    Esta convención plantea un formato para describir la frustración, enojo y
+    blasfemias que día a día tenemos que ver e implementar en el código.
+  </p>
+  <p>
+    Para seguir la convención, los mensajes de commits deben estar escritos
+    usando esta estructura:
+  </p>
+  <pre>
+    <code>
+      &lt;type&gt; [Emoji opcional]: &lt;Insultos, blasfemias y contexto opcional del commit&gt;
 
----
+      El body es innecesario, de todos modos nadie lo pone
 
-<h1>Resume</h1>
+      ¿A quién se le ocurre poner un footer en un commit? Ya ve a la siguiente sección, anda.
+    </code>
+  </pre>
+
+  <p>
+    El elemento Type consiste en valores sugeridos, definidos en esta
+    convención, aunque puede usted ser tan creativo como le parezca. Los valores
+    de type sugeridos son:
+    <ol>
+      <li>
+        apaño: un commit de tipo "apaño" contendrá ese "fix" que pronto volverá
+        a fallar porque solo has añadido un valor hardcoded a tu código para
+        callar al PM
+      </li>
+      <li>
+        sin_test: un commit de tipo "sintest" hace referencia a ese nuevo
+        feature reluciente y sin testear que vivirá en el delicado equilibrio de
+        "mírame y no me toques"
+      </li>
+      <li>
+        esta_si: este tipo de commits indican a otros desarrolladores que has
+        subido un breaking change, así que, o descargan esta versión, o todo les
+        va a fallar
+      </li>
+      <li>
+        inutil: refleja un cambio absurdo de esos que tanto te gusta hacer como
+        borrar un espacio o pasar el linter al código para formatearlo, subir
+        100 cambios y justificar 5 segundos como 3 horas de trabajo.
+      </li>
+      <li>
+        Estos son los tipos sugeridos, probablemente no uses otros porque ya ni
+        imaginación debes tener, así que puedes usar estos para la mayor parte
+        de los casos, así como cuando subes un README alegando que es un feature
+        ¬¬
+      </li>
+    </ol>
+  </p>
+  <p>
+    Tras el type del commit catártico, se recomienda agregar un emoji, de
+    preferencia que refleje la cantidad de estrés invertido en los cambios
+    subidos, si implica algo ofensivo, mejor.
+  </p>
+  <p>
+    Por último, se aconseja añadir una lista de insultos, blasfemias o
+    "sugerencias" poco diplomáticas como cuerpo del commit. Opcionalmente puedes
+    poner el detalle de los cambios en el código, aunque nadie lo va a leer de
+    todos modos.
+  </p>
+</section>
