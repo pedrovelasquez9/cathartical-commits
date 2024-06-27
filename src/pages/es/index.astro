@@ -18,8 +18,8 @@ import Resume from "../../components/astro/resume.astro";
     <main>
       <article>
         <Resume />
-        <Convention />
         <Examples />
+        <Convention />
         <About />
       </article>
     </main>
@@ -52,7 +52,12 @@ import Resume from "../../components/astro/resume.astro";
     font-size: 1.5em;
   }
 
-  p {
+  h2.subtitle {
+    font-size: 1.2em;
+  }
+
+  p,
+  ol > li {
     font-size: 16px;
     line-height: 1.5;
     margin-block-end: 16px;
@@ -77,5 +82,14 @@ import Resume from "../../components/astro/resume.astro";
 
   hr {
     color: #ccc;
+  }
+
+  pre {
+    background: #f4f2f2;
+    border-left: 5px solid #ccc;
+  }
+
+  code {
+    font-size: 15px;
   }
 </style>
