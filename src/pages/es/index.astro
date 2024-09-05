@@ -4,6 +4,8 @@ import Convention from "../../components/astro/convention.astro";
 import Examples from "../../components/astro/examples.astro";
 import Header from "../../components/astro/header.astro";
 import Resume from "../../components/astro/resume.astro";
+
+const currentLocale = Astro.currentLocale || "es";
 ---
 
 <html lang="es">
@@ -17,7 +19,7 @@ import Resume from "../../components/astro/resume.astro";
     <Header />
     <main>
       <article>
-        <Resume />
+        <Resume currentLocale={currentLocale} />
         <Examples />
         <Convention />
         <About />
