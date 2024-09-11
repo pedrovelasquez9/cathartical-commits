@@ -10,9 +10,42 @@ const currentLocale = Astro.currentLocale || "es";
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="mask-icon" href="/favicon.svg" color="#5bbad5" />
+    <link rel="icon" href="/favicon.ico" color="#5bbad5" />
     <meta name="viewport" content="width=device-width" />
     <title>Cathartical commits</title>
+    <meta
+      name="description"
+      content="The commit specification for angry developers"
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://catharticalcommits.com/en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cathartical commits" />
+    <meta
+      property="og:description"
+      content="The commit specification for angry developers"
+    />
+    <meta
+      property="og:image"
+      content="https://opengraph.b-cdn.net/production/images/7d70cd67-462a-4e4e-a3e0-394bf7e39b83.png?token=wfERLFJggApyq1og-eLgxrwMu9gc2e8Gh09CtkG5LI0&height=675&width=1200&expires=33262081446"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="catharticalcommits.com/en" />
+    <meta property="twitter:url" content="https://catharticalcommits.com/en/" />
+    <meta name="twitter:title" content="Cathartical commits" />
+    <meta
+      name="twitter:description"
+      content="The commit specification for angry developers"
+    />
+    <meta
+      name="twitter:image"
+      content="https://opengraph.b-cdn.net/production/images/7d70cd67-462a-4e4e-a3e0-394bf7e39b83.png?token=wfERLFJggApyq1og-eLgxrwMu9gc2e8Gh09CtkG5LI0&height=675&width=1200&expires=33262081446"
+    />
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
   </head>
   <body>
     <Header currentLocale={currentLocale} />
