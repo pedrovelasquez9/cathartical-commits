@@ -1,28 +1,35 @@
 ---
-import About from "../../components/astro/about.astro";
 import Convention from "../../components/astro/convention.astro";
 import Examples from "../../components/astro/examples.astro";
 import Header from "../../components/astro/header.astro";
 import Resume from "../../components/astro/resume.astro";
+
+const currentLocale = Astro.currentLocale || "es";
 ---
 
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="mask-icon" href="/favicon.svg" color="#5bbad5" />
     <meta name="viewport" content="width=device-width" />
     <title>Commits Catárticos</title>
   </head>
   <body>
-    <Header />
+    <Header currentLocale={currentLocale} />
     <main>
       <article>
-        <Resume />
-        <Examples />
-        <Convention />
-        <About />
+        <Resume currentLocale={currentLocale} />
+        <Examples currentLocale={currentLocale} />
+        <Convention currentLocale={currentLocale} />
       </article>
     </main>
+    <footer>
+      <p>
+        Desarrollado y definido con ira por <a
+          href="https://programacion-es.dev">Programación en español</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
 
@@ -33,6 +40,7 @@ import Resume from "../../components/astro/resume.astro";
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
+    scroll-behavior: smooth;
   }
 
   h1 {
@@ -91,5 +99,10 @@ import Resume from "../../components/astro/resume.astro";
 
   code {
     font-size: 15px;
+  }
+
+  footer {
+    text-align: center;
+    padding-bottom: 15px;
   }
 </style>
