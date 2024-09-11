@@ -1,0 +1,34 @@
+---
+import { getLiteral } from "../../i18n/utils.mjs";
+
+const { currentLocale } = Astro.props;
+
+const translate = getLiteral(currentLocale);
+---
+
+<section id="examples">
+  <h1 class="section-title subtitle">{translate("example_title")}</h1>
+  <h2 class="section-title subtitle">
+    {translate("uploading_feature")}
+  </h2>
+  <pre>
+    <code>{translate("no_test")}🖕: {translate("no_test_message")}</code>
+  </pre>
+  <h2 class="section-title subtitle">{translate("uploading_fix")}</h2>
+  <pre>
+    <code>{translate("fix")}😡: {translate("fix_message")}</code>
+  </pre>
+  <pre>
+    <code>{translate("fix")}🤬: {translate("fix_message_2")}</code>
+  </pre>
+  <h2 class="section-title subtitle">{translate("uploading_breaking")}</h2>
+  <pre>
+    <code>{translate("breaking")}🤡: {translate("breaking_message")}</code>
+</pre>
+  <h2 class="section-title subtitle">
+    {translate("useless_change")}
+  </h2>
+  <pre>
+    <code>{translate("useless")}😈: {translate("useless_message")}</code>
+</pre>
+</section>

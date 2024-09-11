@@ -1,0 +1,108 @@
+---
+import Convention from "../../components/astro/convention.astro";
+import Examples from "../../components/astro/examples.astro";
+import Header from "../../components/astro/header.astro";
+import Resume from "../../components/astro/resume.astro";
+
+const currentLocale = Astro.currentLocale || "es";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="mask-icon" href="/favicon.svg" color="#5bbad5" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Cathartical commits</title>
+  </head>
+  <body>
+    <Header currentLocale={currentLocale} />
+    <main>
+      <article>
+        <Resume currentLocale={currentLocale} />
+        <Examples currentLocale={currentLocale} />
+        <Convention currentLocale={currentLocale} />
+      </article>
+    </main>
+    <footer>
+      <p>
+        Developed and defined with anger by <a
+          href="https://programacion-es.dev">Programación en español</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    font-size: 3.6em;
+  }
+
+  .section-title {
+    font-size: 2.3em;
+    color: #002382;
+    border-bottom: 1px solid #eaecef;
+    padding-block-end: 0.3em;
+    margin-block-start: 16px;
+    margin-block-end: 24px;
+  }
+
+  .subtitle {
+    font-size: 1.5em;
+  }
+
+  h2.subtitle {
+    font-size: 1.2em;
+  }
+
+  p,
+  ol > li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-block-end: 16px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  article {
+    border-radius: 15px;
+    color: #24292e;
+    padding-block: 40px;
+    padding-inline: 48px;
+    max-width: 1024px;
+    box-shadow: 1px 1px 10px #a8a8a8;
+    transform: translateY(-64px);
+    background-color: #fff;
+  }
+
+  hr {
+    color: #ccc;
+  }
+
+  pre {
+    background: #f4f2f2;
+    border-left: 5px solid #ccc;
+  }
+
+  code {
+    font-size: 15px;
+  }
+
+  footer {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+</style>

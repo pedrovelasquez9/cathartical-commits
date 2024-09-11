@@ -1,0 +1,56 @@
+---
+import { getLiteral } from "../../i18n/utils.mjs";
+
+const { currentLocale } = Astro.props;
+const getLiterals = getLiteral(currentLocale);
+---
+
+<section id="resume">
+  <h1 class="section-title">{getLiterals("resume_title")}</h1>
+  <h2 class="section-title subtitle">{getLiterals("resume_subtitle")}</h2>
+  <p>
+    {getLiterals("resume_p1")}
+  </p>
+  <p>
+    {getLiterals("resume_p2")}
+  </p>
+  <p>
+    {getLiterals("resume_p3")}
+  </p>
+  <pre>
+    <code>
+      &lt;type&gt; [{getLiterals( "optional_emoji")}]: &lt;{getLiterals("spec_1")}&gt;
+
+      {getLiterals("spec_2")}
+
+      {getLiterals("spec_3")}
+    </code>
+  </pre>
+
+  <p>
+    {getLiterals("spec_4")}
+    <ol>
+      <li>
+        {getLiterals("spec_5")}
+      </li>
+      <li>
+        {getLiterals("spec_6")}
+      </li>
+      <li>
+        {getLiterals("spec_7")}
+      </li>
+      <li>
+        {getLiterals("spec_8")}
+      </li>
+      <li>
+        {getLiterals("spec_9")}
+      </li>
+    </ol>
+  </p>
+  <p>
+    {getLiterals("spec_10")}
+  </p>
+  <p>
+    {getLiterals("spec_11")}
+  </p>
+</section>

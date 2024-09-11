@@ -1,0 +1,28 @@
+---
+import { getLiteral } from "../../i18n/utils.mjs";
+
+const { currentLocale } = Astro.props;
+
+const translate = getLiteral(currentLocale);
+---
+
+<section id="convention">
+  <h1 class="section-title">{translate("specification_title")}</h1>
+  <p>
+    {translate("recommendations")}
+  </p>
+  <ol>
+    <li>
+      {translate("recom_1")}
+    </li>
+    <li>
+      {translate("recom_2")}
+    </li>
+    <li>
+      {translate("recom_3")}
+    </li>
+    <li>
+      {translate("recom_4")}
+    </li>
+  </ol>
+</section>
