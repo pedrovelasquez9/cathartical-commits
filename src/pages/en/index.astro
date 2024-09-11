@@ -139,4 +139,12 @@ const currentLocale = Astro.currentLocale || "es";
     text-align: center;
     padding-bottom: 15px;
   }
+
+  @media (width <= 410px) {
+    article {
+      width: 90vw;
+      text-wrap: wrap;
+      word-wrap: break-word;
+    }
+  }
 </style>
