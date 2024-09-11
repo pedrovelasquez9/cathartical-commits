@@ -81,8 +81,11 @@ const translate = getLiteral(currentLocale);
   ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
     margin-top: 72px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
   }
 
   .header-link {
@@ -97,5 +100,22 @@ const translate = getLiteral(currentLocale);
   .header-link:hover {
     background-color: #fff;
     color: #000;
+  }
+
+  @media (width <= 410px) {
+    .header-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 65dvw;
+      height: inherit;
+      justify-content: space-between;
+      word-wrap: break-word;
+      text-wrap: wrap;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
   }
 </style>
