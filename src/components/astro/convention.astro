@@ -1,25 +1,28 @@
-<section>
-  <h1 class="section-title">Especificación</h1>
+---
+import { getLiteral } from "../../i18n/utils.mjs";
+
+const { currentLocale } = Astro.props;
+
+const translate = getLiteral(currentLocale);
+---
+
+<section id="convention">
+  <h1 class="section-title">{translate("specification_title")}</h1>
   <p>
-    Aquí encontrarás las recomendaciones generales y casos de uso de Cathartical
-    commits en tu día a día:
+    {translate("recommendations")}
   </p>
   <ol>
     <li>
-      Si te vas a hacer el "diplomático" usa otra convención, esto no es para
-      cobardes
+      {translate("recom_1")}
     </li>
     <li>
-      Usa la convención como y cuando quieras, la idea es que seas creativo con
-      tus ofensas
+      {translate("recom_2")}
     </li>
     <li>
-      ¿Cómo saber si estás cumpliendo con la convención? Si no eres tan ofensivo
-      como crees que puedes ser, algo estás haciendo mal.
+      {translate("recom_3")}
     </li>
     <li>
-      ¿Es recomendable usar commits catárticos en mi trabajo? No es mi problema
-      si careces de sentido común, no te voy a responder eso.
+      {translate("recom_4")}
     </li>
   </ol>
 </section>

@@ -2,54 +2,55 @@
 import { getLiteral } from "../../i18n/utils.mjs";
 
 const { currentLocale } = Astro.props;
+const getLiterals = getLiteral(currentLocale);
 ---
 
-<section>
-  <h1 class="section-title">{getLiteral(currentLocale, "resume_title")}</h1>
-  <h2 class="section-title subtitle">Resumen</h2>
+<section id="resume">
+  <h1 class="section-title">{getLiterals("resume_title")}</h1>
+  <h2 class="section-title subtitle">{getLiterals("resume_subtitle")}</h2>
   <p>
-    {getLiteral(currentLocale, "resume_p1")}
+    {getLiterals("resume_p1")}
   </p>
   <p>
-    {getLiteral(currentLocale, "resume_p2")}
+    {getLiterals("resume_p2")}
   </p>
   <p>
-    {getLiteral(currentLocale, "resume_p3")}
+    {getLiterals("resume_p3")}
   </p>
   <pre>
     <code>
-      &lt;type&gt; [{getLiteral(currentLocale, "optional_emoji")}]: &lt;{getLiteral(currentLocale,"spec_1")}&gt;
+      &lt;type&gt; [{getLiterals( "optional_emoji")}]: &lt;{getLiterals("spec_1")}&gt;
 
-      {getLiteral(currentLocale,"spec_2")}
+      {getLiterals("spec_2")}
 
-      {getLiteral(currentLocale,"spec_3")}
+      {getLiterals("spec_3")}
     </code>
   </pre>
 
   <p>
-    {getLiteral(currentLocale, "spec_4")}
+    {getLiterals("spec_4")}
     <ol>
       <li>
-        {getLiteral(currentLocale, "spec_5")}
+        {getLiterals("spec_5")}
       </li>
       <li>
-        {getLiteral(currentLocale, "spec_6")}
+        {getLiterals("spec_6")}
       </li>
       <li>
-        {getLiteral(currentLocale, "spec_7")}
+        {getLiterals("spec_7")}
       </li>
       <li>
-        {getLiteral(currentLocale, "spec_8")}
+        {getLiterals("spec_8")}
       </li>
       <li>
-        {getLiteral(currentLocale, "spec_9")}
+        {getLiterals("spec_9")}
       </li>
     </ol>
   </p>
   <p>
-    {getLiteral(currentLocale, "spec_10")}
+    {getLiterals("spec_10")}
   </p>
   <p>
-    {getLiteral(currentLocale, "spec_11")}
+    {getLiterals("spec_11")}
   </p>
 </section>

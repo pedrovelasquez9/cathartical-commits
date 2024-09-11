@@ -1,5 +1,4 @@
 ---
-import About from "../../components/astro/about.astro";
 import Convention from "../../components/astro/convention.astro";
 import Examples from "../../components/astro/examples.astro";
 import Header from "../../components/astro/header.astro";
@@ -11,20 +10,26 @@ const currentLocale = Astro.currentLocale || "es";
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="mask-icon" href="/favicon.svg" color="#5bbad5" />
     <meta name="viewport" content="width=device-width" />
     <title>Commits Catárticos</title>
   </head>
   <body>
-    <Header />
+    <Header currentLocale={currentLocale} />
     <main>
       <article>
         <Resume currentLocale={currentLocale} />
-        <Examples />
-        <Convention />
-        <About />
+        <Examples currentLocale={currentLocale} />
+        <Convention currentLocale={currentLocale} />
       </article>
     </main>
+    <footer>
+      <p>
+        Desarrollado y definido con ira por <a
+          href="https://programacion-es.dev">Programación en español</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
 
@@ -35,6 +40,7 @@ const currentLocale = Astro.currentLocale || "es";
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
+    scroll-behavior: smooth;
   }
 
   h1 {
@@ -93,5 +99,10 @@ const currentLocale = Astro.currentLocale || "es";
 
   code {
     font-size: 15px;
+  }
+
+  footer {
+    text-align: center;
+    padding-bottom: 15px;
   }
 </style>

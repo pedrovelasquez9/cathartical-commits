@@ -1,5 +1,9 @@
 ---
+import { getLiteral } from "../../i18n/utils.mjs";
 import Nav from "./nav.astro";
+const { currentLocale } = Astro.props;
+
+const translate = getLiteral(currentLocale);
 ---
 
 <header>
@@ -8,12 +12,24 @@ import Nav from "./nav.astro";
       <Nav />
     </div>
     <section class="header-info">
-      <h1>Commits catárticos</h1>
-      <h2>La especificación de commits para developers iracundos.</h2>
+      <h1>{translate("header_title")}</h1>
+      <h2>{translate("header_subtitle")}</h2>
       <ul>
-        <li><a class="header-link" href="#">Resumen</a></li>
-        <li><a class="header-link" href="#">Especificación</a></li>
-        <li><a class="header-link" href="#">Contribuir</a></li>
+        <li>
+          <a class="header-link" href="#resume">{translate("resume_link")}</a>
+        </li>
+        <li>
+          <a class="header-link" href="#convention"
+            >{translate("specification_link")}</a
+          >
+        </li>
+        <li>
+          <a
+            class="header-link"
+            href="https://github.com/pedrovelasquez9/cathartical-commits"
+            target="_blank">{translate("contribute_link")}</a
+          >
+        </li>
       </ul>
     </section>
     <div class="header-image"></div>

@@ -1,27 +1,34 @@
-<section>
-  <h1 class="section-title subtitle">Ejemplos</h1>
+---
+import { getLiteral } from "../../i18n/utils.mjs";
+
+const { currentLocale } = Astro.props;
+
+const translate = getLiteral(currentLocale);
+---
+
+<section id="examples">
+  <h1 class="section-title subtitle">{translate("example_title")}</h1>
   <h2 class="section-title subtitle">
-    Subiendo ese feature que tanto te pidieron
+    {translate("uploading_feature")}
   </h2>
   <pre>
-    <code>sin_test🖕: Aquí está tu vaina, ya deja de presionar con el tiempo, subnormal.</code>
+    <code>{translate("no_test")}🖕: {translate("no_test_message")}</code>
   </pre>
-  <h2 class="section-title subtitle">Subiendo un fix</h2>
+  <h2 class="section-title subtitle">{translate("uploading_fix")}</h2>
   <pre>
-    <code>apaño😡: Ya funciona, no lo vuelvan a tocar o me suscribo a revistas xxx con sus correos corporativos.</code>
+    <code>{translate("fix")}😡: {translate("fix_message")}</code>
   </pre>
   <pre>
-    <code>apaño🤬: Ya implementé la ridiculez que sugirió el tech lead, eso si, por performance no vengan a joder.</code>
+    <code>{translate("fix")}🤬: {translate("fix_message_2")}</code>
   </pre>
-  <h2 class="section-title subtitle">Subiendo breaking change al proyecto</h2>
+  <h2 class="section-title subtitle">{translate("uploading_breaking")}</h2>
   <pre>
-    <code>esta_si🤡: Si tienen un error y vienen a reclamarme, sepan que es porque no se han descargado esta versión, inútiles.</code>
+    <code>{translate("breaking")}🤡: {translate("breaking_message")}</code>
 </pre>
   <h2 class="section-title subtitle">
-    Subiendo un cambio inútil para vengarte por todo lo que tardan en aprobar
-    PRs
+    {translate("useless_change")}
   </h2>
   <pre>
-    <code>inutil😈: A ver si estos 100 cambios los aprueban rápido y sin leer, banda de subnormales.</code>
+    <code>{translate("useless")}😈: {translate("useless_message")}</code>
 </pre>
 </section>
